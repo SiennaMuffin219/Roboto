@@ -20,7 +20,7 @@ namespace RobotoReader
                 stopwatch.Restart();
                 try
                 {
-                    result = client.DownloadString($"http://roboto.elyspioweb.xyz/speed.txt");
+                    result = client.DownloadString($"http://roboto.elyspioweb.xyz/assets/data/speed.txt");
                 } catch { }
                 stopwatch.Stop();
                 Console.Clear();
