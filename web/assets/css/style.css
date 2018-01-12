@@ -1,0 +1,21 @@
+td
+{
+    background-color: grey;
+}
+
+th
+{
+    background-color: lightgrey;
+    text-align: left;
+}
+
+th, td
+{
+    padding : 1em 1em 1em 1em;
+}
+
+table
+{
+    /* border: black 2px solid; */
+    background-color: black;
+}
