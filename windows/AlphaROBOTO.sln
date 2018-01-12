@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotoReader", "RobotoReader\RobotoReader.csproj", "{D73B5C7D-DC03-4814-A3A7-1E9BC23B9CCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotoSender", "robotoGetter\RobotoSender.csproj", "{A54057F0-A762-4837-B063-818DDC1D152E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotoSender", "robotoSender\RobotoSender.csproj", "{A54057F0-A762-4837-B063-818DDC1D152E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

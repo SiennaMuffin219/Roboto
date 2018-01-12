@@ -17,10 +17,17 @@ namespace RobotoReader
             string result = "";
             while (true)
             {
+                Task<string> task = null;
                 stopwatch.Restart();
                 try
                 {
-                    result = client.DownloadString($"http://roboto.elyspioweb.xyz/assets/data/speed.txt");
+                    task = client.DownloadStringTaskAsync($"http://roboto.elyspioweb.xyz/assets/data/speed.txt");
+                    while (!task.Wait(40))
+                    {
+                        task = client.DownloadStringTaskAsync($"http://roboto.elyspioweb.xyz/assets/data/speed.txt");
+                        Console.WriteLine("iyhuojipfejimhgmfdjokiulhfdskiohefrsulimsjqjsziheufrlmjdiehfruiljfdhflhbhedoufrljnmjidheliufrhbj");
+                    }
+                    result = task.Result;
                 } catch { }
                 stopwatch.Stop();
                 Console.Clear();
