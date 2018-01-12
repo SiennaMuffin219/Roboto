@@ -38,11 +38,6 @@ namespace AlphaROBOTO
             Form1_MouseMove(sender, e);
         }
 
-        private void Form1_MouseUp(object sender, MouseEventArgs e)
-        {
-            //IsMouseDown = false;
-        }
-
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
             int x = e.X, y = e.Y;
@@ -52,15 +47,12 @@ namespace AlphaROBOTO
 
                 if (debug)
                 {
-                    //label1.Text = $"{x} - {y}";
                     int speed = -(y - 100) * 10;
-                    //label1.Text = speed.ToString();
                     System.Threading.Thread.Sleep(200);
                 }
 
                 if (x >= 100 && x <= 120)
                 {
-                    //TODO Forward
                     SpeedL = SpeedR = -(y - 100) * 10;
                     Send(SpeedL, SpeedR);
                 }
