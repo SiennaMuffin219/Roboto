@@ -61,7 +61,7 @@ namespace AlphaROBOTO
                 {
                     //TODO Forward
                     SpeedL = SpeedR = -(y - 100) * 10;
-                    client.DownloadString($"http://roboto.elyspioweb.xyz/assets/php/android.php?speedL={SpeedL}&speedR={SpeedR}");
+                    Send(SpeedL, SpeedR);
                 }
                 else
                 {
@@ -69,18 +69,22 @@ namespace AlphaROBOTO
                     {
                         SpeedL = (-(y - 100) * 10) * x / 100;
                         SpeedR = -(y - 100) * 10;
-                        client.DownloadString($"http://roboto.elyspioweb.xyz/assets/php/android.php?speedL={SpeedL}&speedR={SpeedR}");
+                        Send(SpeedL, SpeedR);
                     }
                     if (x > 120)
                     {
                         SpeedL = -(y - 100) * 10;
                         SpeedR = (-(y - 100) * 10) * -(x - 220) / 100;
-                        client.DownloadString($"http://roboto.elyspioweb.xyz/assets/php/android.php?speedL={SpeedL}&speedR={SpeedR}");
+                        Send(SpeedL, SpeedR);
                     }
                 }
             }
         }
 
-
+        private void Send(int SpeedL, int SpeedR)
+        {
+            
+            client.DownloadString($"http://roboto.elyspioweb.xyz/assets/php/android.php?speedL={SpeedL}&speedR={SpeedR}");
+        }
     }
 }
