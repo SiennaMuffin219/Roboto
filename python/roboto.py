@@ -1,37 +1,45 @@
 import urllib.request as web
-
+import time
 leftSpeed = 0
 rightSpeed = 0
 
+contact = False
+proximity = 0
+luminosity = 0
+gyroscope = 0
+
+
 def get_values():
-    data = web.urlopen("http://roboto.elyspioweb.xyz/assets/data/speed.txt").read()
-    return str(data)
+    dataIn = web.urlopen("http://roboto.elyspioweb.xyz/assets/data/speed.txt").read()
+    return str(dataIn)
+
+def put_values(contact, proximity, luminosity, gyroscope):
+    dataOut = web.urlopen("http://roboto.elyspioweb.xyz/assets/php/roboto.php?" + "contact=" + str(contact) + "&proximity=" + str(proximity) +  "&luminosity=" + str(luminosity) + "&gyroscope=" + str(gyroscope))
+
 
 def parse_values(data):
-    deb = 0
-    med = 0
-    fin = 0
-    strTemp = ""
-    if (i != len(data) -1 )
-    while data[deb] != '\ ' and data[deb+1] != 'n':
-        deb += 1
-    while data[med] != '\ ' and data[med+1] != 'n' and med == deb:
-        med += 1
+    indFirstN = 4
+    cpt = 0
+    for c in data:
+        if c == 'n' and c != 4:
+            indSecondN = cpt
+        else:
+            cpt += 1
 
-    for c in range(deb, med, 1):
-        strTemp += c
-    leftSpeed = strTemp
-    strTemp = ""
+    leftSpeed = data[indFirstN:indSecondN]
+    rightSpeed =data[indSecondN+2:len(data)-1]
+    return leftSpeed, rightSpeed
 
+print( "Sending Values")
+put_values(False, 2.5, 39, 42)
+print("Done")
 
-    for c in range(med, len(data) -1    , 1):
-        strTemp += c
+while True :
+    print(" ")
 
+    dataIn = get_values()
+    leftSpeed, rightSpeed = parse_values(dataIn)
 
-
-
-data = get_values()
-print(data)
-parse_values(data)
-
-print(leftSpeed + " " + rightSpeed)
+    print("leftSpeed = "  + leftSpeed)
+    print("rightSpeed = " + rightSpeed)
+    time.sleep(1)
