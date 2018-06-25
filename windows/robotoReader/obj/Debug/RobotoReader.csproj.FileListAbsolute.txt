@@ -1,0 +1,7 @@
+P:\PERSO\Roboto\windows\RobotoReader\bin\Debug\RobotoReader.exe.config
+P:\PERSO\Roboto\windows\RobotoReader\bin\Debug\RobotoReader.exe
+P:\PERSO\Roboto\windows\RobotoReader\bin\Debug\RobotoReader.pdb
+P:\PERSO\Roboto\windows\RobotoReader\obj\Debug\RobotoReader.csprojResolveAssemblyReference.cache
+P:\PERSO\Roboto\windows\RobotoReader\obj\Debug\RobotoReader.csproj.CoreCompileInputs.cache
+P:\PERSO\Roboto\windows\RobotoReader\obj\Debug\RobotoReader.exe
+P:\PERSO\Roboto\windows\RobotoReader\obj\Debug\RobotoReader.pdb

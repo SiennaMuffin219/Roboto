@@ -1,0 +1,10 @@
+P:\PERSO\Roboto\windows\robotoSender\bin\Debug\AlphaROBOTO.exe.config
+P:\PERSO\Roboto\windows\robotoSender\bin\Debug\AlphaROBOTO.exe
+P:\PERSO\Roboto\windows\robotoSender\bin\Debug\AlphaROBOTO.pdb
+P:\PERSO\Roboto\windows\robotoSender\obj\Debug\RobotoSender.csprojResolveAssemblyReference.cache
+P:\PERSO\Roboto\windows\robotoSender\obj\Debug\AlphaROBOTO.Form1.resources
+P:\PERSO\Roboto\windows\robotoSender\obj\Debug\AlphaROBOTO.Properties.Resources.resources
+P:\PERSO\Roboto\windows\robotoSender\obj\Debug\RobotoSender.csproj.GenerateResource.Cache
+P:\PERSO\Roboto\windows\robotoSender\obj\Debug\RobotoSender.csproj.CoreCompileInputs.cache
+P:\PERSO\Roboto\windows\robotoSender\obj\Debug\AlphaROBOTO.exe
+P:\PERSO\Roboto\windows\robotoSender\obj\Debug\AlphaROBOTO.pdb

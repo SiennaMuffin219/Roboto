@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="bd048e79-8474-4a2f-931e-31519d573b13" name="raspbot" url="http://raspberrypi-1">
+        <fileTransfer host="raspberrypi-1" port="22" rootFolder="/home/pi/Progs" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
