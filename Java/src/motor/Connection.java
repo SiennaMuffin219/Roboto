@@ -23,7 +23,7 @@ public class Connection {
 	public Connection() throws UnknownHostException 
 	{
 		myIp = InetAddress.getLocalHost();
-		servIp = InetAddress.getByName("pc-omen");
+		servIp = InetAddress.getByName("raspberrypi");
     	System.out.println("Ip : " + myIp);
 		System.out.println("Port  : " + port);	
 		initCon(servIp, port);

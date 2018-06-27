@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5cd10f87-c022-479f-ac3e-1c37a8ffc021" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/v2/batonDeJoie.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/bin/Roboto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java/src/Roboto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AnalogInput/AnalogInput.ino" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AnalogInput/AnalogInput.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/src/motor/Connection.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/src/motor/Connection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/src/view/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/src/view/Gui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/v2/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/v2/batonDeJoie.py" beforeDir="false" afterPath="$PROJECT_DIR$/v2/batonDeJoie.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +16,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/python$server.coverage" NAME="server Coverage Results" MODIFIED="1530019025137" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/v2" />
-    <SUITE FILE_PATH="coverage/python$batonDeJoie__1_.coverage" NAME="batonDeJoie (1) Coverage Results" MODIFIED="1530009456074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/v2" />
+    <SUITE FILE_PATH="coverage/python$batonDeJoie__1_.coverage" NAME="batonDeJoie (1) Coverage Results" MODIFIED="1530128341014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/v2" />
     <SUITE FILE_PATH="coverage/python$client.coverage" NAME="client Coverage Results" MODIFIED="1529917651089" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/v2" />
     <SUITE FILE_PATH="coverage/python$batonDeJoie.coverage" NAME="batonDeJoie Coverage Results" MODIFIED="1529916661384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -27,8 +25,8 @@
       <file leaf-file-name="batonDeJoie.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/v2/batonDeJoie.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="294">
+              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
               <folding>
                 <element signature="e#86#107#0" expanded="true" />
               </folding>
@@ -36,10 +34,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="serialwin32.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../Python/TestApp/venv/Lib/site-packages/serial/serialwin32.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1176">
+              <caret line="61" selection-start-line="61" selection-end-line="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/v2/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
+            <state relative-caret-position="441">
               <caret line="22" column="18" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="18" />
               <folding>
                 <element signature="e#23#36#0" expanded="true" />
@@ -91,8 +98,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2028" />
-    <option name="y" value="-21" />
+    <option name="x" value="426" />
+    <option name="y" value="-17" />
     <option name="width" value="974" />
     <option name="height" value="873" />
   </component>
@@ -248,8 +255,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.server" />
         <item itemvalue="Python.batonDeJoie (1)" />
+        <item itemvalue="Python.server" />
         <item itemvalue="Python.client" />
         <item itemvalue="Python.batonDeJoie" />
       </list>
@@ -277,17 +284,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1456" height="916" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="13" sideWeight="0.50572914" side_tool="true" visible="true" weight="0.32833958" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50416666" side_tool="true" visible="true" weight="0.32925585" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49427083" weight="0.32925585" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49375" weight="0.17023446" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11875" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0890625" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -300,7 +307,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="File Transfer" order="12" sideWeight="0.49635416" weight="0.32925585" />
+      <window_info anchor="bottom" id="File Transfer" order="12" sideWeight="0.49583334" visible="true" weight="0.32925585" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
@@ -320,6 +327,59 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/v2/batonDeJoie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1554">
+          <caret line="78" column="42" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="42" />
+          <folding>
+            <element signature="e#86#107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Python/TestApp/venv/Lib/site-packages/serial/serialwin32.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1176">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="18" />
+          <folding>
+            <element signature="e#23#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/batonDeJoie.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#86#107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v2/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="18" />
+          <folding>
+            <element signature="e#23#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Client.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/v2/batonDeJoie.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -509,7 +569,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/v2/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
+        <state relative-caret-position="441">
           <caret line="22" column="18" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="18" />
           <folding>
             <element signature="e#23#36#0" expanded="true" />
@@ -517,10 +577,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../Python/TestApp/venv/Lib/site-packages/serial/serialwin32.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1176">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/v2/batonDeJoie.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="294">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
           <folding>
             <element signature="e#86#107#0" expanded="true" />
           </folding>

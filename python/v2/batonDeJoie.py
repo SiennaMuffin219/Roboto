@@ -12,7 +12,7 @@ import serial
 import socket
 import colorama
 
-ROBOTO_HOST = 'pc-rama-v' #Roboto (Lego)
+ROBOTO_HOST = 'elyspio-rama-vi' #Roboto (Lego)
 SERVER_HOST  = 'pc-omen' #Gui
 
 
@@ -34,9 +34,8 @@ class Gui:
             return socket.gethostbyname(name)
 
 
-        def send(self, x, y):
-            data = (str(x) + ' ' + str(y)).encode('utf-8')
-            self._serv.send(data)
+        def send(self, str):
+            self._serv.send(str)
             return (self._serv.recv(self.BUFFER)).decode('utf-8')
 
     def __init__(self):
@@ -58,7 +57,7 @@ class Gui:
             x,y = strr.split(" ")
         except:
             pass
-        dataSended = "pong"
+        dataSended = "Bien Reçu Manette"
         #print("Envoi de " + dataSended)
         self._ser.write(dataSended.encode("utf-8"))
 
@@ -71,13 +70,23 @@ class Gui:
             self.sendData(x, y)
         # self._fen.
 
+    """
+    On envoie a roboto les vitesse a roboto
+    Il nous renvoie son niveau de batterie, sa vitesse effective G/D, si il avance ou non
+    """
     def sendData(self, x, y):
         if((x, y) != (-1, -1)):
-            strFromRoboto = self._conRoboto.send(x, y)
+            bat, leftS, rightS, isForward = self._conRoboto.send(x, y)
+            tab = {bat, leftS, rightS, isForward}
+            self.sendToServ(tab)
         #print("Message reçu : " + self._con.send(x, y))
 
-    def sendToServ(self, str):
-        pass
+    def sendToServ(self, tab):
+        strr = ""
+        for elem in tab:
+            strr += str(elem) + " "
+        return self._conServer.send(strr)
+
 
 f = Gui()
 print("Launching")

@@ -38,10 +38,30 @@ public class Gui extends Application {
 		bp.setCenter(createCenterPane());
 		rootStage.setScene(backScene);
 		rootStage.sizeToScene();
-
+		
+		communicate().start();
+		
 		rootStage.show();
 	}
-
+	
+	private Thread communicate()
+	{
+		Thread t = new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				String str = con.getData(); // Format : bat, leftS, rightS, isForward 
+				String[] tab = str.split(" "); 
+				bat.setText(tab[0]);
+				speedG.setText(tab[1]);
+				speedD.setText(tab[2]);
+				isForward.setText(tab[3]);
+				con.sendData("Message Reçu");
+			}
+		});
+		return t;
+	}
+	
 	private GridPane createLeftPane()
 	{
 		GridPane gp = new GridPane();
