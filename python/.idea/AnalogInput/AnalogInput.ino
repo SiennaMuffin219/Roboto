@@ -31,16 +31,26 @@ int xPin = A0;    // select the input pin for the potentiometer
 int yPin = A1;      // select the pin for the LED
 int x = 0;
 int y = 0;
+bool b;
+ 
 void setup() {
-  pinMode(xPin, INPUT);
+  pinMode(xPin, INPUT); 
   pinMode(yPin, INPUT);
-  Serial.begin(9600);
+  Serial.begin(9600); //115200
+   b = true;
+
 }
 
 void loop() {
-   delay(50);
-   x = analogRead(xPin);
-   y = analogRead(yPin); 
-   String str  = String(x) + " " + String(y);
-   Serial.println(str); 
+ 
+    if(Serial.available() > 0 or b == true)
+    {
+         Serial.println(Serial.read());
+         x = analogRead(xPin);
+         y = analogRead(yPin); 
+         String str  = String(x) + " " + String(y);
+         Serial.println(str);   
+         b = false;  
+    }
+
 }
