@@ -5,7 +5,6 @@ import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
-import javafx.scene.chart.XYChart;
 import javafx.scene.chart.XYChart.Series;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
@@ -14,10 +13,11 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import motor.Connection;
+import motor.TimeServer;
 
 public class Gui extends Application {
 
-	
+	private TimeServer ts;
 	private Label bat, speedG, speedD, isForward;
 	private Series<Number, Number> leftSeries, rightSeries;
 	private Connection con;
@@ -25,13 +25,10 @@ public class Gui extends Application {
 	@Override
 	public void start(Stage rootStage) throws Exception
 	{
-		con = new  Connection();
-		
+	
 		rootStage.setTitle("Test JavaFx");
 		BorderPane bp = new BorderPane();
-		
 
-		
 		Scene backScene = new Scene(bp, Color.ANTIQUEWHITE);
 		bp.setTop(createTopPane());
 		bp.setLeft(createLeftPane());
@@ -39,29 +36,23 @@ public class Gui extends Application {
 		rootStage.setScene(backScene);
 		rootStage.sizeToScene();
 		
-		communicate().start();
 		
+		//String address = InetAddress.getByName("raspberrypi").getHostAddress();
+		String host = "192.168.43.172";
+		int port = 4243;
+
+		ts = new TimeServer(host, port, this);
+		ts.open();
 		rootStage.show();
+		
 	}
-	
-	private Thread communicate()
-	{
-		Thread t = new Thread(new Runnable() {
-			
-			@Override
-			public void run() {
-				String str = con.getData(); // Format : bat, leftS, rightS, isForward 
-				String[] tab = str.split(" "); 
-				bat.setText(tab[0]);
-				speedG.setText(tab[1]);
-				speedD.setText(tab[2]);
-				isForward.setText(tab[3]);
-				con.sendData("Message Reçu");
-			}
-		});
-		return t;
+		
+	@Override
+	public void stop() throws Exception {
+		ts.close();
+		super.stop();
 	}
-	
+
 	private GridPane createLeftPane()
 	{
 		GridPane gp = new GridPane();
@@ -129,6 +120,34 @@ public class Gui extends Application {
 	private void getData()
 	{
 		String data = con.getData();
+	}
+
+	public final Label getBat() {
+		return bat;
+	}
+
+	public final Label getSpeedG() {
+		return speedG;
+	}
+
+	public final Label getSpeedD() {
+		return speedD;
+	}
+
+	public final Label getIsForward() {
+		return isForward;
+	}
+
+	public final Series<Number, Number> getLeftSeries() {
+		return leftSeries;
+	}
+
+	public final Series<Number, Number> getRightSeries() {
+		return rightSeries;
+	}
+
+	public final Connection getCon() {
+		return con;
 	}
 	
 	

@@ -9,6 +9,8 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.nio.charset.Charset;
 
+import view.Gui;
+
 public class Connection {
 	
 	private InetAddress myIp;
@@ -20,74 +22,41 @@ public class Connection {
 	
 	private Socket socket;
 	
-	public Connection() throws UnknownHostException 
+	private Gui gui;
+	
+	public Connection(Gui gui) throws IOException 
 	{
+		this.gui = gui;
 		myIp = InetAddress.getLocalHost();
-		servIp = InetAddress.getByName("raspberrypi");
+		servIp = InetAddress.getByName("localhost");
     	System.out.println("Ip : " + myIp);
 		System.out.println("Port  : " + port);	
-		initCon(servIp, port);
+
+		
+//		socket = new Socket(servIp.getHostAddress(), 4243);
+//		
+//		dos = new DataOutputStream(socket.getOutputStream());
+//		dis = new DataInputStream(socket.getInputStream());
+//		
 	}
 		
-	
-	public void initCon(InetAddress ip, int port)
-	{
-		try 
-		{
-			socket = new Socket(ip.getHostAddress(), port);
-		} 
-		catch (IOException e) 
-		{
-			e.printStackTrace();
-		}
-		
-		initStream();
-	}
-
-
-	public void initStream() 
-	{
-		try 
-		{
-			dos = new DataOutputStream(socket.getOutputStream());
-			dis = new DataInputStream(socket.getInputStream());
-
-		} 
-		catch (IOException e)
-		{
-
-			e.printStackTrace();
-		}
-	}
-	
-	public void sendData(String str)
-	{
-		try {
-			dos.write(str.getBytes(Charset.forName("UTF-8")));
-		} catch (IOException e) {
-			// TODO Blink Circle #Arduino
-			//System.exit(-4);
-		}
-	}
-	
-	
 	public String getData() 
 	{
-		byte[] message = new byte[1024];
+		String str = "";
 		try {
-			dis.read(message);
-		} catch (IOException e1) {
-			//System.exit(-3);
-		}
-		try {
-			return new String(message, "UTF-8");
-		} catch (UnsupportedEncodingException e) {
+			System.out.println("1");
+			dos.writeUTF("Demande de Donnee");
+			System.out.println("2");
+			str = dis.readUTF();
+			System.out.println("3");
+
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		return "";
+		return str;
 	}
+	
 	
 
 }
